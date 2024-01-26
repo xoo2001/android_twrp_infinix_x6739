@@ -1,4 +1,4 @@
-# Android device tree for Infinix Infinix X6739 (Infinix-X6739)
+# Android device tree for Infinix GT 10 PRO (Infinix-X6739)
 
 ```
 #
