@@ -5,12 +5,31 @@
 #
 
 LOCAL_PATH := device/infinix/X6739
+
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Api level
+PRODUCT_SHIPPING_API_LEVEL := 31
+
+# Platform
+PRODUCT_PLATFORM := MT6877
+
+# A/B
+ENABLE_VIRTUAL_AB := true
+
+# fastboot/d hal
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
+    fastbootd
+    
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
+
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
