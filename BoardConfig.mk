@@ -21,6 +21,9 @@ AB_OTA_PARTITIONS += \
     vbmeta_system
 BOARD_USES_RECOVERY_AS_BOOT := true
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := X6739
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
