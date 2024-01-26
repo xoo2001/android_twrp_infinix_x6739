@@ -13,7 +13,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Platform
-PRODUCT_PLATFORM := MT6877
+PRODUCT_PLATFORM := MT6893
 
 # A/B
 ENABLE_VIRTUAL_AB := true
@@ -23,6 +23,18 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
     
+    # A/B
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS += \
+    system \
+    vendor \
+    product \
+    system_ext \
+    boot \
+    vbmeta_vendor \
+    vbmeta_system
+BOARD_USES_RECOVERY_AS_BOOT := true
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
