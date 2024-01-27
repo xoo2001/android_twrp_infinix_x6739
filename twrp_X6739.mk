@@ -30,7 +30,7 @@ $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 # Enable updating of APEXes
 $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-PRODUCT_DEVICE := Infinix-X6739
+PRODUCT_DEVICE := X6739
 PRODUCT_NAME := twrp_X6739
 PRODUCT_BRAND := Infinix
 PRODUCT_MODEL := Infinix X6739
