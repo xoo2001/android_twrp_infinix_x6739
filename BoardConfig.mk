@@ -12,7 +12,7 @@ BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := X6739
+TARGET_OTA_ASSERT_DEVICE := X6739,Infinix-X6739,bismuth
 
 # Architecture
 TARGET_ARCH := arm64
@@ -85,10 +85,8 @@ BOARD_MAIN_PARTITION_LIST := \
 
 # File System
 BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_SYSTEMIMAGE_PARTITION_TYPE := erofs
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := erofs
-BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := erofs 
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6893
@@ -104,9 +102,12 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 # Workaround for error copying vendor files to recovery ramdisk
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_PRODUCT := product
+TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-08-01
+# System as Root
+BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -143,15 +144,13 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_APEX := true
 TARGET_USES_MKE2FS := true # Use mke2fs to create ext4 images
-TW_HAS_MTP := true
-TW_INCLUDE_NTFS_3G := true
 
 # Maintainer/Version
-TW_DEVICE_VERSION := xoo2001
+TW_DEVICE_VERSION := X6739 TEAM
 
 # Set brightness path and level
-TW_MAX_BRIGHTNESS := 1000
-TW_DEFAULT_BRIGHTNESS := 500
+TW_MAX_BRIGHTNESS := 225
+TW_DEFAULT_BRIGHTNESS := 225
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 
 # Include some binaries
@@ -159,6 +158,12 @@ TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_BASH := true
+TW_HAS_NO_RECOVERY_PARTITION := true
+TW_BACKUP_EXCLUSIONS := /data/fonts
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+BOARD_HAS_NO_SELECT_BUTTON := true
+TW_EXCLUDE_TWRPAPP := true
 
 # Use Toolbox instead of Busybox
 TW_USE_TOOLBOX := true
