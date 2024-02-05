@@ -33,7 +33,7 @@ $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 PRODUCT_DEVICE := X6739
 PRODUCT_NAME := twrp_X6739
 PRODUCT_BRAND := Infinix
-PRODUCT_MODEL := Infinix X6739
+PRODUCT_MODEL := Infinix GT 10 Pro
 PRODUCT_MANUFACTURER := infinix
 
 PRODUCT_GMS_CLIENTID_BASE := android-infinix
