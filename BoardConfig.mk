@@ -151,9 +151,6 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_APEX := true
 TARGET_USES_MKE2FS := true # Use mke2fs to create ext4 images
 
-# Maintainer/Version
-TW_DEVICE_VERSION := LayeardTeam
-
 # Set brightness path and level
 TW_FRAMERATE := 120
 TW_MAX_BRIGHTNESS := 1200
@@ -189,3 +186,7 @@ TW_STATUS_ICONS_ALIGN := center
 TW_CUSTOM_CPU_POS := "300"
 TW_CUSTOM_CLOCK_POS := "70"
 TW_CUSTOM_BATTERY_POS := "790"
+
+#PBRP_FLAGS
+PB_TORCH_PATH := "/sys/devices/virtual/torch/torch/torch_level"
+PB_TORCH_MAX_BRIGHTNESS := 1
