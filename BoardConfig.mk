@@ -82,10 +82,7 @@ BOARD_MAIN_PARTITION_LIST := \
     system \
     vendor \
     product \
-    system_ext \
-    odm \
-    vendor_dlkm \
-    odm_dlkm
+    system_ext
 
 # File System
 BOARD_HAS_LARGE_FILESYSTEM := true

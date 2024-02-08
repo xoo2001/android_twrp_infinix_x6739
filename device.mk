@@ -30,13 +30,24 @@ PRODUCT_PACKAGES += \
     # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
-    system \
-    vendor \
-    product \
-    system_ext \
     boot \
+    dtbo \
+    gz \
+    lk \
+    logo \
+    md1img \
+    preloader \
+    product \
+    scp \
+    spmfw \
+    sspm \
+    system \
+    system_ext \
+    tee \
+    vbmeta \
+    vbmeta_system \
     vbmeta_vendor \
-    vbmeta_system
+    vendor
     
 BOARD_USES_RECOVERY_AS_BOOT := true
 
